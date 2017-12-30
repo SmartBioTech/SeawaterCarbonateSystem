@@ -20,7 +20,14 @@ shinyUI(fluidPage(
       numericInput('pH','pH', value = 8.1, min = 0, max = 14, step = 0.01),
       numericInput('pco2','pCO2, ppm', value = 400, min = 0, max = 5000000, step = 1),
       numericInput('temp','Temperature, oC', value = 25, min = 5, max = 40, step = 0.5),
-      numericInput('salinity','Salinity, g/kg', value = 35, min = 5, max = 44, step = 0.5)
+      numericInput('salinity','Salinity, g/kg', value = 35, min = 5, max = 44, step = 0.5),
+      tags$hr(),
+      p(
+         "@author CzechGlobe - Department of Adaptive Biotechnologies (JaCe)"
+      ),
+      p(
+         "@email cerveny.j@czechglobe.cz"
+      )
     ),
     # Show a plot of the generated distribution
     mainPanel(
