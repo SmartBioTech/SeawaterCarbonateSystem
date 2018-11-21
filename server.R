@@ -51,13 +51,13 @@ shinyServer(function(input, output) {
       ly = carb.data$CO2 / carb.data$DIC,
       rx = pH,
       ry = y,
-      xlab = 'pH',
-      ylab = 'Relative distribution of DIC forms, -',
-      rylab = 'Total DIC, log10(umol/kg)',
+      xlab = "pH",
+      ylab = "Relative distribution of DIC forms, -",
+      rylab = expression("log"[10]*"(Total DIC), "*mu*"mol/kg"),
       rpch = 1
     )
     lines(pH, carb.data$HCO3 / carb.data$DIC, lty = 2)
     lines(pH, carb.data$CO3 / carb.data$DIC, lty = 3)
-    legend(2, 0.6, c("dCO2", "HCO3", "CO3"), lty = c(1, 2, 3))
+    legend(2, 0.6, c(expression("dCO"[2]), expression("HCO"[3]^"-"), expression("CO"[3]^"2-")), lty = c(1, 2, 3))
   })
 })
